@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Custom Apps
     "core",
+    "userauth",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 JAZZMIN_SETTINGS = {
     "site_header": "Chime Shop",
     "site_brand": "You order, we deliver",
-    "site_logo": "img/product01.png",
-    "site_copyright": "chime-shop.com"
+    # "site_logo": "img/product01.png",
+    "copyright": "chime-shop.com"
 }
+
+
+AUTH_USER_MODEL = "userauth.User"
