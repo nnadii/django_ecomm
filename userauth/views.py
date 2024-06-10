@@ -16,10 +16,8 @@ def register_view(request):
         if form.is_valid():
             new_user = form.save()
             username = form.cleaned_data.get("username")
-            messages.success(
-                request, f"Hey {username}, your account was created successfully")
-            new_user = authenticate(username=form.cleaned_data["email"],
-                                    password=form.cleaned_data["password1"])
+            messages.success(request, f"Hey {username}, your account was created successfully")
+            new_user = authenticate(username=form.cleaned_data["email"], password=form.cleaned_data["password1"])
             login(request, new_user)
             return redirect("core:index")
     else:
@@ -47,8 +45,7 @@ def login_view(request):
                 messages.success(request, "You're logged in.")
                 return redirect("core:index")
             else:
-                messages.warning(
-                    request, "User does not exist, create an account.")
+                messages.warning(request, "User does not exist, create an account.")
         except:
             messages.warning(request, f"User with {email} does not exist")
 
