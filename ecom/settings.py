@@ -80,10 +80,10 @@ WSGI_APPLICATION = "ecom.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "ecomsys",
-        "USER": "masteruser",
+        "NAME": "nnadi",
+        "USER": "nnadi",
         "PASSWORD": "Chimezie98",
-        "HOST": "ecomsys.cfm6kouyc7pj.us-east-1.rds.amazonaws.com",
+        "HOST": "nest.cfm6kouyc7pj.us-east-1.rds.amazonaws.com",
         "PORT": "5432"
     }
 }
