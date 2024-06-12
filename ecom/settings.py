@@ -21,9 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-sdr4iwpv8#74&fee__$&+xt=c$5r(vp$mwk^xmoavhbmd1a5!d"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = "ecom.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "nnadi",
-        "USER": "nnadi",
+        "NAME": "ecom",
+        "USER": "ecom",
         "PASSWORD": "Chimezie98",
-        "HOST": "nest.cfm6kouyc7pj.us-east-1.rds.amazonaws.com",
+        "HOST": "ecom.ctw2y4gsyzqh.us-west-1.rds.amazonaws.com",
         "PORT": "5432"
     }
 }
