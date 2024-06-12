@@ -54,5 +54,5 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    messages.success(request, f"You logged out")
+    messages.success(request, "You logged out")
     return redirect("userauth:sign-in")
